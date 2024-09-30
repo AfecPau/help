@@ -1,0 +1,91 @@
+name: Formulaire de demande d'aide
+description: Décrivez votre problème pour obtenir de l'aide.
+title: '[Help]: '
+labels: ['question', 'help wanted']
+projects: ['test/1', 'test/2']
+assignees:
+  - hemkass
+body:
+  - type: input
+    id: contact
+    attributes:
+      label: 'Nom Prénom'
+      placeholder: 'ex. Martin Camille'
+    validations:
+      required: true
+  - type: input
+    id: subject
+    attributes:
+      label: Sujet
+      description: Expliquez en une phrase le sujet de votre question.
+      placeholder: "ex: Pourquoi ma boucle for en JavaScript ne s'exécute-t-elle qu'une seule fois?"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Que s'est il passé?
+      description: Décrivez ici votre question en détail. Indiquez ce que vous essayez d'accomplir et ce que vous ne comprenez pas.
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 'Comportement Attendu'
+      description: 'Expliquez ce que vous attendiez à la suite de votre action.'
+      placeholder: 'Décrivez le comportement attendu...'
+    validations:
+      required: true
+  - type: textarea
+    id: relevant-code
+    attributes:
+      label: Code concerné
+      description: Ajoutez ici le code pertinent, si applicable, en utilisant les balises de code.
+      placeholder: 'Ajoutez votre code ici...'
+    validations:
+      required: false
+  - type: textarea
+    id: research-done
+    attributes:
+      label: Recherche effectuée
+      description: Décrivez les recherches que vous avez effectuées avant de poser la question (par exemple, liens vers des articles consultés, essais de débogage, etc.).
+      placeholder: 'Ajoutez les détails de vos recherches ici...'
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots-logs
+    attributes:
+      label: "Capture d'écran / Journaux"
+      description: Ajoutez ici toute capture d'écran ou log pertinent. Vous pouvez glisser-déposer les images directement dans le champ de texte lorsque vous créez l'issue, ou ajouter un lien vers l'image hébergée ailleurs.
+      placeholder: "Ajoutez vos captures d'écran ou logs ici..."
+    validations:
+      required: false
+  - type: input
+    id: related-repo
+    attributes:
+      label: Lien vers un autre dépôt
+      description: Si votre question est liée à un autre dépôt, ajoutez un lien vers celui-ci ici.
+      placeholder: 'ex: https://github.com/user/repository'
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Contexte supplémentaire
+      description: Ajoutez toute autre information qui pourrait aider à comprendre votre question.
+      placeholder: 'Ajoutez des informations supplémentaires ici...'
+    validations:
+      required: false
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Système d'Exploitation
+      description: Sélectionnez le système d'exploitation que vous utilisez.
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Autre
+    validations:
+      required: true
